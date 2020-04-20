@@ -55,36 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        super.onOptionsItemSelected(item);
-
-        switch(item.getItemId()) {
-            case R.id.item1:Bundle dataBundle = new Bundle();
-                dataBundle.putInt("id", 0);
-
-                Intent intent = new Intent(getApplicationContext(),DisplayMhs.class);
-                intent.putExtras(dataBundle);
-
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-    public boolean onKeyDown(int keycode, KeyEvent event) {
-        if (keycode == KeyEvent.KEYCODE_BACK) {
-            moveTaskToBack(true);
-        }
-        return super.onKeyDown(keycode, event);
-    }
 }
 
 
